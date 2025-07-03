@@ -123,9 +123,9 @@ public class Main {
         }
 
         while (true) {
-            ConsoleHelper.print("INPUT", "Enter a valid UUID (can be dashless, though premium accounts use dashless): ", INFO_COLOR);
+            ConsoleHelper.print("INPUT", "Enter a valid UUID: ", INFO_COLOR);
             String customUuidAdd = scanner.nextLine();
-            if (!Validate.isValidUUID(customUuidAdd) || !Validate.isValidDashlessUUID(customUuidAdd)) {
+            if (!Validate.isValidUUID(customUuidAdd)) {
                 ConsoleHelper.printLine("WARNING", "The UUID you entered is invalid. Please ensure it follows the correct format.", WARN_COLOR);
                 ConsoleHelper.print("QUERY", "Would you like to try again? (y/n): ", INFO_COLOR);
                 String retry = scanner.nextLine().trim().toLowerCase();
